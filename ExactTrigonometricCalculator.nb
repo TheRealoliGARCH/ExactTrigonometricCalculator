@@ -1,0 +1,28 @@
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Get", "[", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<engine.wl\>\""}], 
+     "}"}], "]"}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Get", "[", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], 
+      ",", "\"\<latex_exporter.wl\>\""}], "}"}], "]"}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"result", "=", 
+   RowBox[{"RunCalculation", "[", "\"\<37.125\>\"", "]"}]}], ";"}], "\n", 
+ RowBox[{"CalculationToLaTeX", "[", "result", "]"}], "\n", 
+ RowBox[{"ExportCalculationLaTeX", "[", 
+  RowBox[{"result", ",", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<result.tex\>\""}], 
+     "}"}], "]"}]}], "]"}]}], "Input"]
+}]
