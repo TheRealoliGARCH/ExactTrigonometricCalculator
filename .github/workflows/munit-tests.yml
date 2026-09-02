@@ -1,0 +1,22 @@
+name: MUnit Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  munit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Wolfram Engine
+        uses: wolfram-actions/setup-wolfram-engine@v1
+
+      - name: Run MUnit tests
+        shell: bash
+        run: |
+          wolframscript -file tests/run_tests.wls
