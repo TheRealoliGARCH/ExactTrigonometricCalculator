@@ -40,22 +40,26 @@ The engine follows the constructive chain developed for the project:
 3. $18^\circ$ from
    $$2\cdot18^\circ=90^\circ-3\cdot18^\circ,$$
    together with the exact Pythagorean constraint.
-4. $10^\circ$ from
-   $$\cos(3\cdot10^\circ)=\cos30^\circ.$$
-5. $9^\circ$ by halving $18^\circ$.
-6. $5^\circ$ by halving $10^\circ$.
-7. $4^\circ=9^\circ-5^\circ$, followed by $2^\circ$ and $1^\circ$ by half-angle.
-8. $3^\circ=18^\circ-15^\circ$ and $6^\circ=2\cdot3^\circ$.
-9. $7^\circ$, $8^\circ$, $36^\circ$, $54^\circ$, and $75^\circ$ are additional reusable DAG nodes.
-10. Integer angles are constructed on demand from the explicit core DAG and quadrant symmetries.
-11. $\frac13^\circ$ from
+4. $20^\circ$ is constructed directly from the real-radical expression
+   $$\cos20^\circ=\frac{\sqrt[3]{2+\sqrt3}+\sqrt[3]{2-\sqrt3}}{2},$$
+   with
+   $$\sin20^\circ=\sqrt{1-\cos^2 20^\circ}.$$
+   This replaces the complex-unit Cardano representation and keeps the $20^\circ$ anchor entirely in real radicals.
+5. $10^\circ$ is then obtained by the half-angle formula from $20^\circ$.
+6. $9^\circ$ by halving $18^\circ$.
+7. $5^\circ$ by halving $10^\circ$.
+8. $4^\circ=9^\circ-5^\circ$, followed by $2^\circ$ and $1^\circ$ by half-angle.
+9. $3^\circ=18^\circ-15^\circ$ and $6^\circ=2\cdot3^\circ$.
+10. $7^\circ$, $8^\circ$, $36^\circ$, $54^\circ$, and $75^\circ$ are additional reusable DAG nodes.
+11. Integer angles are constructed on demand from the explicit core DAG and quadrant symmetries.
+12. $\frac13^\circ$ from
     $$\cos(3x)=\cos1^\circ.$$
-12. $\frac12^\circ$ by half-angle.
-13. $\frac1{10^n}{}^\circ$ recursively from the quintic
+13. $\frac12^\circ$ by half-angle.
+14. $\frac1{10^n}{}^\circ$ recursively from the quintic
     $$16x^5-20x^3+5x-C=0,$$
     where $C$ is the exact cosine of the preceding subdivision.
 
-The engine retains the exact symbolic expressions produced by these constructions. No `RootReduce[]` or `ToRadicals[]` post-processing pass is used.
+The engine retains the exact symbolic expressions produced by these constructions. No `RootReduce[]` or `ToRadicals[]` post-processing pass is used. The $20^\circ$ anchor and all values derived from it therefore remain free of the complex unit in their constructive definitions.
 
 ## Finite decimal angles
 
