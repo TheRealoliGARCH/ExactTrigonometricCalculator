@@ -72,10 +72,9 @@ CorePair[18] = ExactPair[
   Sqrt[10 + 2 Sqrt[5]]/4
 ];
 
-(* Cardano radical form for cos 20 degrees. The conjugate cube roots
-   are principal branches and their sum is real. *)
+(* Real-radical form for cos 20 degrees; no complex unit is used. *)
 CorePair[20] := CorePair[20] = Module[{c},
-  c = (1 + I Sqrt[3])^(1/3)/2 + (1 - I Sqrt[3])^(1/3)/2;
+  c = ((2 + Sqrt[3])^(1/3) + (2 - Sqrt[3])^(1/3))/2;
   ExactPair[Sqrt[1 - c^2], c]
 ];
 
